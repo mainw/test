@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.DialogWindows;
 
 namespace WpfApp1.Pages
 {
@@ -40,7 +41,7 @@ namespace WpfApp1.Pages
                 if (password.Length != 0)
                 {
                     string str = CaptchaCreater.GetRandomText(6);
-                    if (new DialogWindows.CaptchaWindow(str).ToString().ToLower() != str.ToLower())
+                    if (((string)new CaptchaWindow(str))?.ToLower() != str.ToLower())
                     {
                         Task.Run(() =>
                         {

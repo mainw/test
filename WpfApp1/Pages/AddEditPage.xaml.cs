@@ -29,5 +29,10 @@ namespace WpfApp1.Pages
         {
 
         }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

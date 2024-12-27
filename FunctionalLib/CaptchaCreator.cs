@@ -40,19 +40,20 @@ namespace AutoDbClassLibrary
                     graphics.DrawString(lett.ToString(), font, new SolidBrush(GetRandomColor(0, 255)), lettX, y);
                     x += (int)(textSize.Width / str.Length * 2);
                 }
-                AddLines(graphics);
+                AddLines(graphics, img);
             }
             return img;
         }
-        public static AddLines(Graphics graphics)
+        public static void AddLines(Graphics graphics, Bitmap img)
         {
             for (int i = 0; i < _random.Next(2, 5); i++)
             {
                 int x1 = _random.Next(img.Width);
                 int y1 = _random.Next(img.Height);
-                x2 = _random.Next(img.Width);
+                int x2 = _random.Next(img.Width);
                 int y2 = _random.Next(img.Height);
-                graphics.DrawLine(GetRandomColor(0, 100), x1, y1, x2, y2);
+                Pen pen = new Pen(GetRandomColor(0, 100), 1);
+                graphics.DrawLine(pen, x1, y1, x2, y2);
             }
         }
     }
