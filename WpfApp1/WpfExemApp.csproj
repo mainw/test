@@ -66,6 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Addfiles\CaptchaCreator.cs" />
     <Compile Include="Db\DbExam.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +164,11 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbExam.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Addfiles\activity_diagram.drawio" />
+    <None Include="Addfiles\deployment_diagram.drawio" />
+    <None Include="Addfiles\precedents_diagram.drawio" />
+    <None Include="Addfiles\sequence.drawio" />
+    <None Include="Addfiles\statechart_diagram.drawio" />
     <None Include="Db\DbExam.edmx.diagram">
       <DependentUpon>DbExam.edmx</DependentUpon>
     </None>
@@ -182,6 +188,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Addfiles\import.sql" />
     <Content Include="Db\DbExam.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DbExam.Context.cs</LastGenOutput>
