@@ -37,7 +37,7 @@ namespace AutoDbClassLibrary
                 foreach (char lett in str)
                 {
                     int lettX = x + (textSize.Width / str.Length);
-                    graphics.DrawString(lett.ToString(), font, new SolidBrush(GetRandomColor(0, 255)), lettX, y);
+                    graphics.DrawString(lett.ToString(), font, new SolidBrush(GetRandomColor(0, 200)), lettX, y);
                     x += (int)(textSize.Width / str.Length * 2);
                 }
                 AddLines(graphics, img);
