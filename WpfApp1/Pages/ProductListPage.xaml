@@ -1,0 +1,61 @@
+﻿<Page x:Class="WpfApp1.Pages.ProductListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductListPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"  Orientation="Horizontal">
+            <Border CornerRadius="23" Width="80" Height="50" VerticalAlignment="Center">
+                <Image Name="ProdImage" Source="/Pages/logotip.png"/>
+            </Border>
+            <TextBox Name="SearchTextBox" Height="30" TextChanged="SearchTextBox_TextChanged"/>
+            <ComboBox Name="FilterComboBox" Width="150" Height="30" SelectionChanged="FilterComboBox_SelectionChanged"/>
+            <TextBlock Name="fioTextBlock" Width="150" Height="30" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <ListView Name="ProductListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding name}"/>
+                                            <TextBlock Text=" | "/>
+                                            <TextBlock Text="{Binding ProductType.name}"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding cost}"/>
+                                    </StackPanel>
+                                    <Button Name="EditProductButton" Content="редактировать" Click="EditProductButton_Click" Grid.Column="1"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+            <Grid Grid.Column="1">
+                <ComboBox Name="SortBy" VerticalAlignment="Top" SelectionChanged="SortBy_SelectionChanged" Margin="5" Width="140" Height="30"/>
+                <Button Name="AddProductButton" Content="Добавить" VerticalAlignment="Bottom" Click="AddProductButton_Click" Margin="5" Width="140" Height="30"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

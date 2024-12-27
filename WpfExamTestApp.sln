@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExemApp", "WpfApp1\WpfExemApp.csproj", "{69546720-2A59-4D75-88B4-45851C1CDC67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalLib", "FunctionalLib\FunctionalLib.csproj", "{DFB74B6C-93B6-4081-89BA-D9DCE1FBE086}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{E2A85386-58FE-4F3D-8729-846C9ED304B9}"
+	ProjectSection(SolutionItems) = preProject
+		info\uml\activity_diagram.drawio = info\uml\activity_diagram.drawio
+		info\CaptchaCreator.cs = info\CaptchaCreator.cs
+		info\uml\deployment_diagram.drawio = info\uml\deployment_diagram.drawio
+		info\import.sql = info\import.sql
+		info\uml\precedents_diagram.drawio = info\uml\precedents_diagram.drawio
+		info\uml\sequence.drawio = info\uml\sequence.drawio
+		info\uml\statechart_diagram.drawio = info\uml\statechart_diagram.drawio
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69546720-2A59-4D75-88B4-45851C1CDC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69546720-2A59-4D75-88B4-45851C1CDC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69546720-2A59-4D75-88B4-45851C1CDC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69546720-2A59-4D75-88B4-45851C1CDC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB74B6C-93B6-4081-89BA-D9DCE1FBE086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB74B6C-93B6-4081-89BA-D9DCE1FBE086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB74B6C-93B6-4081-89BA-D9DCE1FBE086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB74B6C-93B6-4081-89BA-D9DCE1FBE086}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18E8BD31-C232-42FD-BB74-773F38384874}
+	EndGlobalSection
+EndGlobal
